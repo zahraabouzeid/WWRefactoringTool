@@ -1,0 +1,1 @@
+[FixInsight Optimization] Unit.pas(100): O801 CONST missing for unmodified string parameter '_sFileName'
