@@ -5,6 +5,7 @@ from termcolor import colored
 fixInsight = open("FixInsight.txt")
 print('Reading FixInsight Log: ')
 lst = []
+dic = {}
 
 for Line in tqdm(fixInsight):
     Line = Line.strip().split(" ")
@@ -22,12 +23,18 @@ for Line in tqdm(fixInsight):
     cParameter = "const " + uParameter
     try:
         getLine = linecache.getline(currentUnit, uLine)
-        getLine = getLine[getLine.index(".") + 1 : getLine.index(")")]
+        getLine = getLine[getLine.index(".") + 1 : getLine.index(uParameter) + len(uParameter)]
         changeLine = getLine.replace(uParameter, cParameter)
         print (f"Replacing {getLine} with {changeLine}")
         with open(currentUnit, 'r+', encoding = "utf8") as fHandle:
             base = fHandle.read()
             changed = base.replace(getLine, changeLine)
+            _ = changed.count(changeLine)
+            print(_, 'times replaced')
+
+            if _ % 2 != 0:
+                dic[uName] = _
+
             fHandle.seek(0)
             fHandle.write(changed)
             fHandle.close()
@@ -41,4 +48,12 @@ if len(lst) > 0:
     for _ in lst:
         print(colored(_ , "red"))
 else:
-    print(colored("\nReplacing done successfully.", "green"))
+    print(colored("\nReplacing done successfully.\n", "green"))
+
+if len(dic) > 0:
+    print(colored("Warning: ", "yellow"))
+    print("You must check these Units: ")
+    for key, value in dic.items():
+        print(colored(f"{key} : {value}", "yellow"))
+
+input("\nPress Enter to exit...")
