@@ -22,7 +22,7 @@ There may be cases where it does not correctly apply the refactoring changes.
 It is always recommended to review the changes made by the tool to ensure they are correct.
 
 Contact
-If you have any questions or issues with the tool, please contact me at zahraahbouzeid@gmail.com.
+If you have any questions or issues with the tool, please contact me at zahraahbouzeid@gmail.com,
 or go to https://linktr.ee/zahraahbouzeid) and connect with me on social media.
 
 $ DEU
