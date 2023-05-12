@@ -23,7 +23,7 @@ It is always recommended to review the changes made by the tool to ensure they a
 
 Contact
 If you have any questions or issues with the tool, please contact me at zahraahbouzeid@gmail.com,
-or go to https://linktr.ee/zahraahbouzeid) and connect with me on social media.
+or go to https://linktr.ee/zahraahbouzeid and connect with me on social media.
 
 $ DEU
 Ich habe dieses Tool entworfen, um meine Arbeit schneller und effizienter zu machen, indem ich den Prozess der Code-Refaktorisierung automatisiere.
