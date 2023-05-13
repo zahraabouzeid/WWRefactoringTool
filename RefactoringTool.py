@@ -79,5 +79,6 @@ elif 40 < successRate < 70:
     print(colored(f"{fSuccessRate}% Success Rate", "yellow"))
 elif successRate < 40:
     print(colored(f"{fSuccessRate}% Success Rate", "red"))
-
+    
+fixInsight.close()
 input("\nPress Enter to exit...")
