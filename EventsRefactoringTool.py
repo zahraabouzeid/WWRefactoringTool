@@ -75,4 +75,4 @@ for Line in searchResults:
         
         changed = base.replace(implementation, editedImplementation)
         pasHandle.seek(0)
-        pasHandle.write(base)
+        pasHandle.write(changed)
